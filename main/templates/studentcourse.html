@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Add Course</title>
+</head>
+<body>
+<section class="matches-area bg-image ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">Course</span>
+            <h2>Course Name</h2>
+        </div>
+        <div class="matches-tabs">
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="all-matches" role="tabpanel">
+
+                    <div class="single-matches-box">
+                        <div class="row align-items-center">
+
+
+
+                            <div class="single-matches-box">
+                        <div class="row align-items-center">
+
+                            <div class="col-lg-5 col-md-12">
+                                <div class="matches-team">
+                                    
+                                    <div class="content">
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-12">
+                                <div class="matches-result">
+                                    <ul>
+
+                                    </ul>
+                                    <span class="date-time"></span>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-5 col-md-12">
+                                <div class="matches-team right-image">
+                                    <div class="content">
+                            {% for i in student %}
+
+                                         <h3><a href="{% url 'Studentsdetail' i.id %}">{{ i.course }}</a></h3>
+                                         <h3>{{i.created_at}}</h3>
+                                   
+
+                            {% endfor %}
+                                   
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+</html> 

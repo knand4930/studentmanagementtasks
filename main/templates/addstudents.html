@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Add Student</title>
+</head>
+<body>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<form method="post">
+{% csrf_token %}
+ <select name="course"  data-placeholder="Choose : Category">
+    <option></option>
+      {% for i in obj %}
+     <option value="{{i.name}}">{{i.name}}</option>
+      {% endfor %}                                                  
+   </select>    
+<br>
+<br>
+                                                                                                  
+<input type="text" name="name" value="" placeholder="Enter Student Name">
+</br>
+<br>
+
+<input type="text" name="father" value="" placeholder="Enter Student Father's Name">
+
+</br>
+
+<br>
+<input type="Date" name="dateofbirth" value="" placeholder="Enter Student Date of Birth">
+<br>
+</br>
+<input type="text" name="address" value="" placeholder="Enter Student Address"><br>
+</br>
+
+<input type="text" name="city" value="" placeholder="Enter Student City"><br>
+</br>
+
+<input type="text" name="state" value="" placeholder="Enter Student State"><br>
+</br>
+
+<input type="text" name="pin" value="" placeholder="Enter Student pincode"><br>
+</br>
+
+<input type="text" name="number" value="" placeholder="Enter Student number"><br>
+</br>
+
+<input type="text" name="email" value="" placeholder="Enter Student Email"><br>
+
+</br>
+<input type="text" name="marks" value="" placeholder="Enter Student Marks"><br>
+</br>
+<br>
+
+
+
+<input type="submit" value="Add Course">
+  </form>
+
+
+</body>
+</html> 

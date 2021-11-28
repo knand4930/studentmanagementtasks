@@ -1,0 +1,19 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Home page</title>
+</head>
+<body>
+<h1>Course Start</h1>
+{% for i in obj %}
+<h3><a href="{% url 'studentcourse' i.id %}">{{i.name }}</a></h3>
+<h3> {{ i.create_at }}</h3>
+{% endfor %}
+<h1>Course End</h1>
+
+<a href="{% url 'addcourses' %}"> Add Course </a>
+<br>
+<hr>
+<a href="{% url 'addstudents' %}" > Add Student </a>
+</body>
+</html>
